@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)file:///C:/Users/EDZ/Desktop/%E5%BC%80%E5%8F%91%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>开发快速指南</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+    
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+<!-- No Baidu Siteapp-->
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<!-- HTML5 shim for IE8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+<link href="http://developer.egret.com/cn/tpl/simplebootx/Public/images/favicon.ico" type="image/x-icon" rel="icon">
+<link href="http://developer.egret.com/cn/tpl/simplebootx/Public/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<!-- change to bootstrap3 -->
+<link href="./index_files/bootstrap.min.css" rel="stylesheet">
+<!-- change theme to bootstrap3 -->
+<link href="./index_files/theme.min.css" rel="stylesheet" id="g-css-theme">
+<link href="./index_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="./index_files/style.css" rel="stylesheet">
+<link href="./index_files/header.css" rel="stylesheet">
+<style>
+  .Conversion{position:absolute;top:13px;left:25px;
+  width:24px;height:24px;background: url("/cn/statics/images/product_sprites.png") no-repeat -24px -24px;}
+  .DB{position:absolute;top:13px;left:25px;
+  width:24px;height:24px;background: url("/cn/statics/images/product_sprites.png") no-repeat -48px -48px;}
+  .Engine2D{position:absolute;top:13px;left:25px;
+  width:24px;height:24px;background: url("/cn/statics/images/product_sprites.png") no-repeat -48px -24px;}
+  .Engine3D{position:absolute;top:13px;left:25px;
+  width:24px;height:24px;background: url("/cn/statics/images/product_sprites.png") no-repeat -48px -0px;}
+  .extension{position:absolute;top:13px;left:25px;
+  width:24px;height:23px;background: url("/cn/statics/images/product_sprites.png") no-repeat -24px -72px;}
+  .Feather{position:absolute;top:13px;left:25px;
+  width:24px;height:24px;background: url("/cn/statics/images/product_sprites.png") no-repeat -24px -48px;}
+  .Inspector{position:absolute;top:13px;left:25px;
+  width:24px;height:24px;background: url("/cn/statics/images/product_sprites.png") no-repeat -48px -72px;}
+  .Lakeshore{position:absolute;top:13px;left:25px;
+  width:24px;height:24px;background: url("/cn/statics/images/product_sprites.png") no-repeat -24px -0px;}
+  .Merger{position:absolute;top:13px;left:25px;
+  width:24px;height:24px;background: url("/cn/statics/images/product_sprites.png") no-repeat -0px -72px;}
+  .platform{position:absolute;top:13px;left:25px;
+  width:24px;height:24px;background: url("/cn/statics/images/product_sprites.png") no-repeat -0px -48px;}
+  .Depot{position:absolute;top:13px;left:25px;
+  width:24px;height:24px;background: url("/cn/statics/images/product_sprites.png") no-repeat -0px -24px;}
+  .Wing{position:absolute;top:13px;left:25px;
+  width:24px;height:24px;background: url("/cn/statics/images/product_sprites.png") no-repeat -0px -0px;}
+  .Native{position:absolute;top:13px;left:25px;
+    width:25px;height:25px;background: url("https://cdn.www.egret.com/official/new-egret/img/product-icon-native-25.jpg");}
+  .closeButton{width:24px;height:24px;background: url("/cn/statics/images/icon/closebutton.png") no-repeat -0px -0px;background-size:cover;}
+  .microclient{position:absolute;top:13px;left:25px;
+		width:25px;height:25px;background: url("http://cdn.dev.egret.com/simpleboot/public/microclient.jpg");}
+
+  .matchvs{position:absolute;top:13px;left:25px;
+    width:25px;height:25px;background: url("/cn/data/upload/simpleboot/public/matchvs.png");}
+</style>
+
+
+    <link rel="stylesheet" href="./index_files/nav2.css">
+    <link rel="stylesheet" href="./index_files/ui.easytree.css" class="skins">
+  
+    <link rel="stylesheet" href="./index_files/editormd.preview.css">
+    
+    <link rel="stylesheet" href="./index_files/doc_md.min.css">
+    <!-- 
+    <link rel="stylesheet" href="/cn/tpl/simplebootx/Public/simpleboot/doc_article/css/typo.css" />
+     -->
+    <style>
+        .tc-box-md>.easytree-container li .easytree-expander {
+            background-image:url("/cn/statics/images/icon/arrow-down.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .tc-box-md>.easytree-container li.easytree-unclose>span>.easytree-expander {
+            background-image:url("/cn/statics/images/icon/arrow-up.png");
+        }
+    </style><script src="file://hm.baidu.com/hm.js?e37d06fa1de56304c9d645100ad450ac"></script><script src="./index_files/hm.js.下载"></script><script type="text/javascript" src="./index_files/ajaxForm.js.下载"></script>
+<link type="text/css" rel="stylesheet" href="./index_files/katex.min.css"><script type="text/javascript" src="file:///C:/cn/statics/js/ajaxForm.js?v="></script><script id="-cdn-bootcss-com-KaTeX-0-3-0-katex-min" type="text/javascript" src="./index_files/katex.min.js.下载"></script></head>
+<body class="">
+<div style="margin:0 auto;width:0px;height:0px;overflow:hidden;">
+	<img src="./index_files/edn5120.png" width="700">
+</div>
+<div class="container-fluid  navbarbg">
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="http://developer.egret.com/cn"><img id="navlogo" src="file:///C:/cn/tpl/simplebootx/Public/images/logo.png" class="img-responsive visible-lg-block visible-sm-block visible-xs-block"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="main-menu">
+                <!-- 菜单栏 -->
+                <ul id="" class="navbar-nav navbar-nav-ul-padding-top"><li class="productBox" id="menu-item-2"><a href="http://developer.egret.com/cn/" target="">首页</a></li><li class="productBox dropdown" id="menu-item-22"><a href="javascript:;" target="" style="color:#1dafec">文档</a><ul class="subnav subnav-products flex" style="display: none;"><li class="titleBox" style="width: 200px;"><a class="subMenuLink">引擎</a></li><li class="productBox"><a class="subMenuLink" href="http://developer.egret.com/cn/github/egret-docs/Engine2D/index.html?home=2">Egret Engine 2D<span class="Engine2D"></span></a></li><li class="productBox"><a class="subMenuLink" href="http://developer.egret.com/cn/github/egret-docs/Engine3D/index.html?home=2">Egret Pro<span class="Engine3D"></span></a></li><li class="productBox"><a class="subMenuLink" href="http://developer.egret.com/cn/github/egret-docs/extension/index.html?home=2">Egret 扩展库<span class="extension"></span></a></li><li class="productBox"><a class="subMenuLink" href="http://docs.egret.com/native/">Egret Native<span class="Native"></span></a></li></ul><ul class="subnav subnav-products flex" style="display: none;"><li class="titleBox" style="width: 600px;"><a class="subMenuLink">工具</a></li><li class="productBox"><a class="subMenuLink" href="http://developer.egret.com/cn/github/egret-docs/Wing/index.html?home=2">Egret Wing<span class="Wing"></span></a></li><li class="productBox"><a class="subMenuLink" href="http://developer.egret.com/cn/github/egret-docs/DB/index.html?home=2">DragonBones<span class="DB"></span></a></li><li class="productBox"><a class="subMenuLink" href="http://developer.egret.com/cn/github/egret-docs/Depot/index.html?home=2">Res Depot<span class="Depot"></span></a></li><li class="productBox"><a class="subMenuLink" href="http://developer.egret.com/cn/github/egret-docs/Merger/index.html?home=2">Texture Merger<span class="Merger"></span></a></li><li class="productBox"><a class="subMenuLink" href="http://developer.egret.com/cn/github/egret-docs/Inspector/index.html?home=2">Egret Inspector<span class="Inspector"></span></a></li><li class="productBox"><a class="subMenuLink" href="https://docs.egret.com/feather">Egret Feather<span class="Feather"></span></a></li><li class="productBox"><a class="subMenuLink" href="http://developer.egret.com/cn/github/egret-docs/Lakeshore/index.html?home=2">Lakeshore<span class="Lakeshore"></span></a></li><li class="productBox"><a class="subMenuLink"></a></li></ul><ul class="subnav subnav-products flex" style="display: none;"><li class="titleBox" style="width: 200px;"><a class="subMenuLink">其他</a></li><li class="productBox"><a class="subMenuLink" href="http://developer.egret.com/cn/github/egret-docs/platform/index.html?home=2">平台接入<span class="platform"></span></a></li><li class="productBox"><a class="subMenuLink" href="http://developer.egret.com/cn/github/egret-docs/matchvs/index.html?home=2">Matchvs 游戏云<span class="matchvs"></span></a></li><li class="productBox"><a class="subMenuLink"></a></li><li class="productBox"><a class="subMenuLink"></a></li></ul></li><li class="productBox" id="menu-item-25"><a href="http://developer.egret.com/cn/list/video/" target="">视频</a></li><li class="productBox" id="menu-item-4"><a href="http://developer.egret.com/cn/apidoc/" target="">API</a></li><li class="expBox dropdown" id="menu-item-5"><a href="http://developer.egret.com/cn/example/page/index" target="" class="dropdown-toggle" data-toggle="dropdown">示例</a><ul class="subnav subnav-products flex" style="display: none;"><li class="productBox" id="menu-item-23"><a href="http://developer.egret.com/cn/list/example/id/190" target="">功能演示</a></li><li class="productBox" id="menu-item-24"><a href="http://developer.egret.com/cn/example/egret2d/index.html#010-disp-basic" target="">教学示例</a></li></ul></li><li class="productBox" id="menu-item-1"><a href="http://bbs.egret.com/" target="_blank">社区</a></li></ul>                <!-- end -->
+                <li class="switch-button pull-right media-clear-pull">
+					<a href="http://developer.egret.com/en/" class="small">
+	        		中文 / English
+	        		</a>
+				</li>
+                <!-- login out -->
+				<li class="logintBox dropdown pull-right media-clear-pull" id="menu-user-login">
+					<!-- start of login -->
+					<a href="javascript:void(0);" class="navbar-login">
+						<img src="./index_files/login.png" alt="" class="img-responsive">
+					</a>
+					<ul class="subnav subnav-login flex" style="display:none;">
+                            <li class="logintBox">
+                                <a href="file:///C:/cn/user/login/index?goUrl=file:///C:/Users/EDZ/Desktop/%25E5%25BC%2580%25E5%258F%2591%25E5%25BF%25AB%25E9%2580%259F%25E6%258C%2587%25E5%258D%2597.html" id="u-log">登陆</a>
+                            </li>
+                            <li class="logintBox">
+                                <a href="file:///C:/cn/user/register/index" id="u-reg" target="_blank">注册</a>
+                            </li>
+					</ul>
+					<!-- end of login -->
+				</li>
+				<li class="logintOutBox dropdown pull-right media-clear-pull" id="menu-user-info" style="display: none">
+					<!-- start of login success -->
+					<a href="http://developer.egret.com/cn/github/egret-docs/Engine2D/minigamebaidu/getStart/index.html?home=2#" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="./index_files/headicon.png" class="headicon" id="main-menu-user-headicon">
+						<span class="user-nicename" id="main-menu-user-nicename" style="display: none"></span>
+					</a>
+					<ul class="subnav subnav-login-out flex" style="display:none;">
+						<li class="logintOutBox"><a href="http://developer.egret.com/cn/user/book/index"><i class="fa fa-user"></i> &nbsp;个人中心</a></li>
+						<li class="logintOutBox"><a href="http://developer.egret.com/cn/user/index/logout2"><i class="fa fa-sign-out"></i> &nbsp;退出</a></li>
+					</ul>
+					<!-- end of login success -->
+				</li>
+
+                <!-- end of login out -->
+                <ul class="navbar-nav navbar-nav-ul-padding-top pull-right media-clear-pull">
+                    <li class="navbar-search">
+                        <!-- start search -->
+                        <form class="form-inline navbar-form pull-left" method="get" id="srarchForm" action="http://developer.egret.com/cn/portal/search/index">
+                            <input class="form-control" id="keyword" name="keyword" value="" type="text" placeholder="搜索...">
+                            <input type="hidden" name="page" value="1">
+                            <input type="hidden" class="" id="keytype" name="type" value="">
+                        </form>
+                        <!-- end of search -->
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>   
+</div>  
+<script>
+    var goUrl = encodeURI(window.location.href);
+    document.getElementById("u-log").href = "/cn/user/login/index?goUrl=" + goUrl;
+    document.getElementById("u-reg").href = "/cn/user/register/index";
+</script>
+<div id="modal-content">
+    
+</div>
+<!-- sidebar -->
+<div class="container-fluid nav2" style="display:none">
+    <div id="nav2" class="container">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            
+            <ul id="nav2ul" class="nav navbar-nav nav2item">
+                <li><a id="nav_term_Engine2D" data-path="Engine2D.json" href="http://developer.egret.com/cn/github/egret-docs/Engine2D/index.html?home=1">Egret Engine 2D</a></li><li><a id="nav_term_Engine3D" data-path="Engine3D.json" href="http://developer.egret.com/cn/github/egret-docs/Engine3D/index.html?home=1">Egret Pro</a></li><li><a id="nav_term_extension" data-path="extension.json" href="http://developer.egret.com/cn/github/egret-docs/extension/index.html?home=1">Egret 扩展库</a></li><li><a id="nav_term_Native" data-path="Native.json" href="http://developer.egret.com/cn/github/egret-docs/Native/index.html?home=1">Egret Native</a></li>                <li style="display:none" id="categroy-content">
+                       [{
+    "children": [{
+        "filename": "Engine2D.json",
+        "des": "2D引擎相关文档",
+        "text": "Egret Engine 2D",
+        "in_use": "true"
+      },
+      {
+        "filename": "Engine3D.json",
+        "des": "3D引擎相关文档",
+        "text": "Egret Pro",
+        "in_use": "true"
+      },
+      {
+        "filename": "extension.json",
+        "des": "Egret 扩展库相关文档",
+        "text": "Egret 扩展库",
+        "in_use": "true"
+      },
+      {
+        "filename": "Native.json",
+        "des": "Egret Native相关文档",
+        "text": "Egret Native",
+        "in_use": "true"
+      }
+    ],
+    "isFolder": true,
+    "text": "引擎",
+    "des": "引擎分类",
+    "in_use": true
+  },
+  {
+    "children": [{
+        "filename": "Wing.json",
+        "des": "Egret Wing说明文档",
+        "text": "Egret Wing",
+        "in_use": "true"
+      },
+      {
+        "filename": "DB.json",
+        "des": "DragonBones相关文档",
+        "text": "DragonBones",
+        "in_use": "true"
+      },
+      {
+        "filename": "Depot.json",
+        "des": "Res Depot说明文档",
+        "text": "Res Depot",
+        "in_use": "true"
+      },
+      {
+        "filename": "Merger.json",
+        "des": "Texture Merger说明文档",
+        "text": "Texture Merger",
+        "in_use": "true"
+      },
+      {
+        "filename": "Inspector.json",
+        "des": "Egret Inspector说明文档",
+        "text": "Egret Inspector",
+        "in_use": "true"
+      },
+      {
+        "filename": "Conversion.json",
+        "des": "Egret Conversion说明文档",
+        "text": "Egret Conversion",
+        "in_use": "false"
+      },
+      {
+        "filename": "Feather.json",
+        "des": "Egret Feather说明文档",
+        "text": "Egret Feather",
+        "in_use": "true"
+      },
+      {
+        "filename": "EgretVS.json",
+        "des": "EgretVS说明文档",
+        "text": "EgretVS",
+        "in_use": "false"
+      },
+      {
+        "filename": "Lakeshore.json",
+        "des": "Lakeshore相关文档",
+        "text": "Lakeshore",
+        "in_use": "true"
+      }
+    ],
+    "isFolder": true,
+    "text": "工具",
+    "des": "工具分类",
+    "in_use": true
+  },
+  {
+    "children": [{
+        "filename": "platform.json",
+        "des": "平台接入相关文档",
+        "text": "平台接入",
+        "in_use": "true"
+      },
+      {
+        "filename": "Developer.json",
+        "des": "Developer更新日志",
+        "text": "Developer更新日志",
+        "in_use": "false"
+      },
+      {
+        "filename": "microclient.json",
+        "des": "微端解决方案",
+        "text": "微端解决方案",
+        "in_use": "false"
+      },
+      {
+        "filename": "matchvs.json",
+        "des": "Matchvs 游戏云",
+        "text": "Matchvs 游戏云",
+        "in_use": "true"
+      }
+    ],
+    "isFolder": true,
+    "text": "其他",
+    "des": "平台分类",
+    "in_use": true
+  }
+]
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>	
+<!-- end sidebar -->
+<div class="visible-xs-block media-terms-show-list" style="display:none;">
+    <button type="button" class="btn btn-media-list" data-target="media-terms-list">
+        目录
+    </button>
+</div>  
+<div class="container-fluid" style="padding-right: 15px;padding-left: 15px;">
+    <div class="row media-doc-container">
+
+        <!-- start of left sidebar -->
+        
+        <div class="media-terms-list">
+            <div id="terms-title" style="margin-left: -230px; position: absolute; padding-top: 10px;">Egret Engine 2D</div>
+            <div class="tc-box-md" id="treelist" style="width: 230px; top: 55px; margin-left: -230px; position: absolute; height: 759px; padding-top: 10px; z-index: 1000; overflow-x: hidden;"><ul tabindex="0" class="ui-easytree easytree-container easytree-focused" "=""><li><span id="_st_node_3656_0" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">更新详情</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_0_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.31</span></span></li><li><span id="_st_node_3656_0_2" class="easytree-node  easytree-exp-cl easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">历史更新</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_0_2_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.30</span></span></li><li><span id="_st_node_3656_0_2_1" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.29</span></span></li><li><span id="_st_node_3656_0_2_2" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.28</span></span></li><li><span id="_st_node_3656_0_2_3" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.27</span></span></li><li><span id="_st_node_3656_0_2_4" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.26</span></span></li><li><span id="_st_node_3656_0_2_5" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.25</span></span></li><li><span id="_st_node_3656_0_2_6" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.24</span></span></li><li><span id="_st_node_3656_0_2_7" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.23</span></span></li><li><span id="_st_node_3656_0_2_8" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.22</span></span></li><li><span id="_st_node_3656_0_2_9" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.21</span></span></li><li><span id="_st_node_3656_0_2_10" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.20</span></span></li><li><span id="_st_node_3656_0_2_11" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.19</span></span></li><li><span id="_st_node_3656_0_2_12" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.18</span></span></li><li><span id="_st_node_3656_0_2_13" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.17</span></span></li><li><span id="_st_node_3656_0_2_14" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.16</span></span></li><li><span id="_st_node_3656_0_2_15" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.15</span></span></li><li><span id="_st_node_3656_0_2_16" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.14</span></span></li><li><span id="_st_node_3656_0_2_17" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.13</span></span></li><li><span id="_st_node_3656_0_2_18" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.12</span></span></li><li><span id="_st_node_3656_0_2_19" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.11</span></span></li><li><span id="_st_node_3656_0_2_20" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.10</span></span></li><li><span id="_st_node_3656_0_2_21" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.9</span></span></li><li><span id="_st_node_3656_0_2_22" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.8</span></span></li><li><span id="_st_node_3656_0_2_23" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.7</span></span></li><li><span id="_st_node_3656_0_2_24" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.6</span></span></li><li><span id="_st_node_3656_0_2_25" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.5</span></span></li><li><span id="_st_node_3656_0_2_26" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.4</span></span></li><li><span id="_st_node_3656_0_2_27" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.3</span></span></li><li><span id="_st_node_3656_0_2_28" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.2</span></span></li><li><span id="_st_node_3656_0_2_29" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.1</span></span></li><li><span id="_st_node_3656_0_2_30" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.2.0</span></span></li><li><span id="_st_node_3656_0_2_31" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.11</span></span></li><li><span id="_st_node_3656_0_2_32" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.10</span></span></li><li><span id="_st_node_3656_0_2_33" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.9</span></span></li><li><span id="_st_node_3656_0_2_34" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.8</span></span></li><li><span id="_st_node_3656_0_2_35" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.7</span></span></li><li><span id="_st_node_3656_0_2_36" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.6</span></span></li><li><span id="_st_node_3656_0_2_37" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.5</span></span></li><li><span id="_st_node_3656_0_2_38" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.4</span></span></li><li><span id="_st_node_3656_0_2_39" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.3</span></span></li><li><span id="_st_node_3656_0_2_40" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.2</span></span></li><li><span id="_st_node_3656_0_2_41" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.1</span></span></li><li><span id="_st_node_3656_0_2_42" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.1.0</span></span></li><li><span id="_st_node_3656_0_2_43" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.15</span></span></li><li><span id="_st_node_3656_0_2_44" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.14</span></span></li><li><span id="_st_node_3656_0_2_45" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.13</span></span></li><li><span id="_st_node_3656_0_2_46" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.12</span></span></li><li><span id="_st_node_3656_0_2_47" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.11</span></span></li><li><span id="_st_node_3656_0_2_48" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.10</span></span></li><li><span id="_st_node_3656_0_2_49" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.9</span></span></li><li><span id="_st_node_3656_0_2_50" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.8</span></span></li><li><span id="_st_node_3656_0_2_51" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.7</span></span></li><li><span id="_st_node_3656_0_2_52" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.6</span></span></li><li><span id="_st_node_3656_0_2_53" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.5</span></span></li><li><span id="_st_node_3656_0_2_54" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.4</span></span></li><li><span id="_st_node_3656_0_2_55" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.3</span></span></li><li><span id="_st_node_3656_0_2_56" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.2</span></span></li><li><span id="_st_node_3656_0_2_57" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.1</span></span></li><li><span id="_st_node_3656_0_2_58" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 5.0.0</span></span></li><li><span id="_st_node_3656_0_2_59" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 4.1.1</span></span></li><li><span id="_st_node_3656_0_2_60" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 4.1.0</span></span></li><li><span id="_st_node_3656_0_2_61" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 4.0.3</span></span></li><li><span id="_st_node_3656_0_2_62" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 4.0.2</span></span></li><li><span id="_st_node_3656_0_2_63" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 4.0.1</span></span></li><li><span id="_st_node_3656_0_2_64" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 4.0.0</span></span></li><li><span id="_st_node_3656_0_2_65" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.2.6</span></span></li><li><span id="_st_node_3656_0_2_66" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.2.5</span></span></li><li><span id="_st_node_3656_0_2_67" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.2.4</span></span></li><li><span id="_st_node_3656_0_2_68" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.2.3</span></span></li><li><span id="_st_node_3656_0_2_69" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.2.2</span></span></li><li><span id="_st_node_3656_0_2_70" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.2.1</span></span></li><li><span id="_st_node_3656_0_2_71" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.2.0</span></span></li><li><span id="_st_node_3656_0_2_72" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.1.8</span></span></li><li><span id="_st_node_3656_0_2_73" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.1.7</span></span></li><li><span id="_st_node_3656_0_2_74" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.1.6</span></span></li><li><span id="_st_node_3656_0_2_75" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.1.5</span></span></li><li><span id="_st_node_3656_0_2_76" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.1.4</span></span></li><li><span id="_st_node_3656_0_2_77" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.1.3</span></span></li><li><span id="_st_node_3656_0_2_78" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.1.2</span></span></li><li><span id="_st_node_3656_0_2_79" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.1.1</span></span></li><li><span id="_st_node_3656_0_2_80" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.1.0</span></span></li><li><span id="_st_node_3656_0_2_81" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.0.8</span></span></li><li><span id="_st_node_3656_0_2_82" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.0.7</span></span></li><li><span id="_st_node_3656_0_2_83" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.0.6</span></span></li><li><span id="_st_node_3656_0_2_84" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.0.5</span></span></li><li><span id="_st_node_3656_0_2_85" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.0.4</span></span></li><li><span id="_st_node_3656_0_2_86" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.0.3</span></span></li><li><span id="_st_node_3656_0_2_87" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.0.2</span></span></li><li><span id="_st_node_3656_0_2_88" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.0.1</span></span></li><li><span id="_st_node_3656_0_2_89" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 3.0.0</span></span></li><li><span id="_st_node_3656_0_2_90" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 2.5.7</span></span></li><li><span id="_st_node_3656_0_2_91" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 2.5.6</span></span></li><li><span id="_st_node_3656_0_2_92" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 2.5.5</span></span></li><li><span id="_st_node_3656_0_2_93" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 2.5.4</span></span></li><li><span id="_st_node_3656_0_2_94" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 2.5.3</span></span></li><li><span id="_st_node_3656_0_2_95" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 2.5.2</span></span></li><li><span id="_st_node_3656_0_2_96" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 2.5.1</span></span></li><li><span id="_st_node_3656_0_2_97" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Egret Engine2D 2.5.0</span></span></li></ul></li></ul></li><li><span id="_st_node_3656_1" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Get Started</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_1_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Hello World</span></span></li><li><span id="_st_node_3656_1_1" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">生命周期</span></span></li></ul></li><li><span id="_st_node_3656_2" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">微信小游戏开发指南</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_2_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">微信小游戏 FAQ</span></span></li><li><span id="_st_node_3656_2_1" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">小游戏简介</span></span></li><li><span id="_st_node_3656_2_2" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">小游戏新手教程</span></span></li><li><span id="_st_node_3656_2_3" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">小游戏进阶教程</span></span></li><li><span id="_st_node_3656_2_4" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">小游戏 API 调用</span></span></li><li><span id="_st_node_3656_2_5" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">开放数据域</span></span></li><li><span id="_st_node_3656_2_6" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">项目发布小游戏指南</span></span></li><li><span id="_st_node_3656_2_7" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">后续路线图</span></span></li><li><span id="_st_node_3656_2_8" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">如何使用缓存资源</span></span></li><li><span id="_st_node_3656_2_9" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">如何分包加载资源</span></span></li><li><span id="_st_node_3656_2_10" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">使用数据库API</span></span></li><li><span id="_st_node_3656_2_11" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">使用微信引擎插件</span></span></li></ul></li><li><span id="_st_node_3656_3" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">QQ小游戏开发指南</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_3_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">开发快速指南</span></span></li><li><span id="_st_node_3656_3_1" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">QQ小游戏FAQ</span></span></li></ul></li><li class="easytree-unclose"><span id="_st_node_3656_4" class="easytree-node  easytree-ico-cf easytree-exp-e"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">百度小游戏开发指南</span></span><ul tabindex="0" class="" style="" "=""><li class="easytree-unclose"><span id="_st_node_3656_4_0" class="easytree-node  easytree-ico-c easytree-exp-n easytree-active"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">开发快速指南</span></span></li><li><span id="_st_node_3656_4_1" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">百度小游戏FAQ</span></span></li></ul></li><li><span id="_st_node_3656_5" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">小米快游戏开发指南</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_5_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">开发快速指南</span></span></li><li><span id="_st_node_3656_5_1" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">小米快游戏FAQ</span></span></li></ul></li><li><span id="_st_node_3656_6" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">OPPO小游戏开发指南</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_6_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">开发快速指南</span></span></li><li><span id="_st_node_3656_6_1" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">OPPO小游游戏FAQ</span></span></li></ul></li><li><span id="_st_node_3656_7" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">vivo小游戏开发指南</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_7_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">开发快速指南</span></span></li><li><span id="_st_node_3656_7_1" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">vivo小游游戏FAQ</span></span></li></ul></li><li><span id="_st_node_3656_9" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Facebook InstantGames</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_9_0" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">开发快速指南</span></span></li></ul></li><li><span id="_st_node_3656_10" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">项目配置</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_10_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">安装与部署</span></span></li><li><span id="_st_node_3656_10_1" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">命令行手册</span></span></li><li><span id="_st_node_3656_10_2" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">入口文件说明</span></span></li><li><span id="_st_node_3656_10_3" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">入口文件模板</span></span></li><li><span id="_st_node_3656_10_4" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">项目配置文件说明</span></span></li><li><span id="_st_node_3656_10_5" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">模块配置</span></span></li><li><span id="_st_node_3656_10_6" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">tsconfig 配置文件</span></span></li><li><span id="_st_node_3656_10_7" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">编译顺序说明</span></span></li><li><span id="_st_node_3656_10_8" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">webassembly 版本使用</span></span></li><li><span id="_st_node_3656_10_9" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">扩展库简介</span></span></li><li><span id="_st_node_3656_10_10" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">第三方扩展库</span></span></li><li><span id="_st_node_3656_10_11" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">5.2 项目升级指南</span></span></li></ul></li><li><span id="_st_node_3656_11" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">显示对象和显示容器</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_11_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">基本概念</span></span></li><li><span id="_st_node_3656_11_1" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">变换操作</span></span></li><li><span id="_st_node_3656_11_2" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">添加与删除显示对象</span></span></li><li><span id="_st_node_3656_11_3" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">深度管理</span></span></li><li><span id="_st_node_3656_11_4" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">重设子对象深度</span></span></li></ul></li><li><span id="_st_node_3656_12" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">矢量绘图</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_12_0" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">使用矢量绘图</span></span></li></ul></li><li><span id="_st_node_3656_13" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">遮罩</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_13_0" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">遮罩</span></span></li></ul></li><li><span id="_st_node_3656_14" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">碰撞检测</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_14_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">矩形碰撞检测</span></span></li><li><span id="_st_node_3656_14_1" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">像素碰撞检测</span></span></li></ul></li><li><span id="_st_node_3656_15" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">文本</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_15_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">文本类型</span></span></li><li><span id="_st_node_3656_15_1" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">文本样式</span></span></li></ul></li><li><span id="_st_node_3656_16" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">事件机制</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_16_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">事件处理机制</span></span></li><li><span id="_st_node_3656_16_1" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">事件的执行流程</span></span></li><li><span id="_st_node_3656_16_2" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">Event类</span></span></li><li><span id="_st_node_3656_16_3" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">事件侦听器</span></span></li><li><span id="_st_node_3656_16_4" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">事件的优先级</span></span></li><li><span id="_st_node_3656_16_5" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">触摸事件</span></span></li></ul></li><li><span id="_st_node_3656_17" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">网络</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_17_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">发送HTTP请求</span></span></li><li><span id="_st_node_3656_17_1" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">加载位图文件</span></span></li><li><span id="_st_node_3656_17_2" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">加载文本和二进制文件</span></span></li></ul></li><li><span id="_st_node_3656_18" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">位图纹理</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_18_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">位图纹理</span></span></li><li><span id="_st_node_3656_18_1" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">九宫格</span></span></li><li><span id="_st_node_3656_18_2" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">纹理的填充方式</span></span></li><li><span id="_st_node_3656_18_3" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">纹理集的使用</span></span></li><li><span id="_st_node_3656_18_4" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">截屏功能</span></span></li><li><span id="_st_node_3656_18_5" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">KTX 纹理压缩</span></span></li><li><span id="_st_node_3656_18_6" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">KTX 纹理压缩 FAQ</span></span></li><li><span id="_st_node_3656_18_7" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">KTX 转换工具</span></span></li></ul></li><li><span id="_st_node_3656_19" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">颜色效果</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_19_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">混合模式</span></span></li><li><span id="_st_node_3656_19_1" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">滤镜</span></span></li><li><span id="_st_node_3656_19_2" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">自定义Shader</span></span></li><li><span id="_st_node_3656_19_3" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">设置填充色</span></span></li></ul></li><li><span id="_st_node_3656_20" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">时间控制</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_20_0" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">时间控制</span></span></li></ul></li><li><span id="_st_node_3656_21" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">多媒体</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_21_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">音频</span></span></li><li><span id="_st_node_3656_21_1" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">视频</span></span></li><li><span id="_st_node_3656_21_2" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">环境信息</span></span></li></ul></li><li><span id="_st_node_3656_22" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">渲染模式</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_22_0" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">WebGL渲染</span></span></li></ul></li><li><span id="_st_node_3656_23" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">屏幕适配</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_23_2" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">缩放模式</span></span></li><li><span id="_st_node_3656_23_3" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">旋转模式</span></span></li></ul></li><li><span id="_st_node_3656_24" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">调试</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_24_0" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">调试</span></span></li></ul></li><li><span id="_st_node_3656_25" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">命令行扩展插件</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_25_0" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">命令行扩展插件</span></span></li><li><span id="_st_node_3656_25_1" class="easytree-node  easytree-exp-n easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">API 文档</span></span></li><li><span id="_st_node_3656_25_2" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">插件使用案例教程</span></span></li></ul></li><li><span id="_st_node_3656_26" class="easytree-node  easytree-exp-c easytree-ico-cf"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">调用原生JS</span></span><ul tabindex="0" class="" style="display:none" "=""><li><span id="_st_node_3656_26_0" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">ts 与 js 互调</span></span></li></ul></li><li><span id="_st_node_3656_27" class="easytree-node  easytree-exp-nl easytree-ico-c"><span class="easytree-expander"></span><span class="easytree-icon"></span><span class="easytree-title">发布项目</span></span></li></ul></div>
+        </div>
+        <!-- end of left sidebar -->   
+   
+        <div id="post_content">
+            <div>
+                <div class="article-title-md">
+                    <div id="article_title" class="left">开发快速指南</div>
+                </div>
+
+                <textarea id="append_article_content" style="display:none;">### 一.开发环境准备
+
+* Egret Launcher 1.0.61 以上版本
+* 白鹭引擎 5.2.13 以上版本
+* 百度小游戏官网：[链接地址](https://smartprogram.baidu.com/docs/introduction/register/)，注册账号，获取 appid
+* 准备最新版百度开发者工具：[下载地址](https://smartprogram.baidu.com/docs/game/tutorials/howto/dev/)
+
+
+### 二.创建小游戏
+
+使用最新的 Egret Launcher 创建 5.2.13 以上版本的项目，项目名字叫做 `BaiduDemo`。
+
+然后在 Egret Launcher 您会看到刚刚创建的项目，点击发布设置:
+
+![](p1.png)
+
+会弹出发布设置面板，点击`百度小游戏`
+
+![](p2.png)
+
+填写 AppID ，可以在 [百度智能小游戏官网](https://smartprogram.baidu.com/mappconsole/main/login) 申请
+
+点击确定按钮后，弹出提示面板
+
+![](p3.png)
+
+### 三.编译和发布命令
+
+#### 方法1：开发者可以使用命令行来编译和发布百度小游戏：
+	
+  * 编译小游戏： ```egret build --target baidugame```。
+  * 发布小游戏： ```egret publish --target baidugame``` 。
+
+#### 方法2：配置 egretProperties.json
+
+![](p4.png)
+
+如上所示，将 `egretProperties.json` 配置文件中的 `target` 对象的 `current` 属性设置为 `baidugame` 时，可以直接使用```egret build```和```egret publish```命令编译和发布百度小游戏。
+
+### 四.模拟器调试
+![](p5.png)
+
+打开百度开发者工具，点击`打开`按钮
+
+![](p6.png)
+
+选择创建好的百度小游戏项目，注意：项目类型要选择为`小游戏`
+
+![](p7.png)
+
+上图为成功打开项目的样子。
+
+* 注意，点击左上角的`登陆`按钮后，才可以在手机上调试。需要使用手机`百度App`扫码登陆。**注意：**在百度小游戏正式对普通用户开放前，需要使用测试版的App才可以打开，请联系百度获取。
+
+![](p8.png)
+
+登陆成功后，会出现`预览`和`发布`两个按钮。
+
+* 点击`预览`，可以使用`百度App`扫码在手机上调试。
+* 点击`发布`，可以上传到百度后台，审核后正式发布。
+
+</textarea>
+                <div id="article_content" class="markdown-body editormd-html-preview typo"><h3 id="h3--"><a name="一.开发环境准备" class="reference-link"></a><span class="header-link octicon octicon-link"></span>一.开发环境准备</h3><ul>
+<li>Egret Launcher 1.0.61 以上版本</li><li>白鹭引擎 5.2.13 以上版本</li><li>百度小游戏官网：<a href="https://smartprogram.baidu.com/docs/introduction/register/" target="_blank">链接地址</a>，注册账号，获取 appid</li><li>准备最新版百度开发者工具：<a href="https://smartprogram.baidu.com/docs/game/tutorials/howto/dev/" target="_blank">下载地址</a></li></ul>
+<h3 id="h3--"><a name="二.创建小游戏" class="reference-link"></a><span class="header-link octicon octicon-link"></span>二.创建小游戏</h3><p>使用最新的 Egret Launcher 创建 5.2.13 以上版本的项目，项目名字叫做 <code>BaiduDemo</code>。</p>
+<p>然后在 Egret Launcher 您会看到刚刚创建的项目，点击发布设置:</p>
+<p><img data-md="/cn/data/upload/egret-docs/Engine2D/minigamebaidu/getStart/p1.png" src="./index_files/p1.png" alt=""></p>
+<p>会弹出发布设置面板，点击<code>百度小游戏</code></p>
+<p><img data-md="/cn/data/upload/egret-docs/Engine2D/minigamebaidu/getStart/p2.png" src="./index_files/p2.png" alt=""></p>
+<p>填写 AppID ，可以在 <a href="https://smartprogram.baidu.com/mappconsole/main/login" target="_blank">百度智能小游戏官网</a> 申请</p>
+<p>点击确定按钮后，弹出提示面板</p>
+<p><img data-md="/cn/data/upload/egret-docs/Engine2D/minigamebaidu/getStart/p3.png" src="./index_files/p3.png" alt=""></p>
+<h3 id="h3--"><a name="三.编译和发布命令" class="reference-link"></a><span class="header-link octicon octicon-link"></span>三.编译和发布命令</h3><h4 id="h4--1-"><a name="方法1：开发者可以使用命令行来编译和发布百度小游戏：" class="reference-link"></a><span class="header-link octicon octicon-link"></span>方法1：开发者可以使用命令行来编译和发布百度小游戏：</h4><ul>
+<li>编译小游戏： <code>egret build --target baidugame</code>。</li><li>发布小游戏： <code>egret publish --target baidugame</code> 。</li></ul>
+<h4 id="h4--2-egretproperties-json"><a name="方法2：配置 egretProperties.json" class="reference-link"></a><span class="header-link octicon octicon-link"></span>方法2：配置 egretProperties.json</h4><p><img data-md="/cn/data/upload/egret-docs/Engine2D/minigamebaidu/getStart/p4.png" src="./index_files/p4.png" alt=""></p>
+<p>如上所示，将 <code>egretProperties.json</code> 配置文件中的 <code>target</code> 对象的 <code>current</code> 属性设置为 <code>baidugame</code> 时，可以直接使用<code>egret build</code>和<code>egret publish</code>命令编译和发布百度小游戏。</p>
+<h3 id="h3--"><a name="四.模拟器调试" class="reference-link"></a><span class="header-link octicon octicon-link"></span>四.模拟器调试</h3><p><img data-md="/cn/data/upload/egret-docs/Engine2D/minigamebaidu/getStart/p5.png" src="./index_files/p5.png" alt=""></p>
+<p>打开百度开发者工具，点击<code>打开</code>按钮</p>
+<p><img data-md="/cn/data/upload/egret-docs/Engine2D/minigamebaidu/getStart/p6.png" src="./index_files/p6.png" alt=""></p>
+<p>选择创建好的百度小游戏项目，注意：项目类型要选择为<code>小游戏</code></p>
+<p><img data-md="/cn/data/upload/egret-docs/Engine2D/minigamebaidu/getStart/p7.png" src="./index_files/p7.png" alt=""></p>
+<p>上图为成功打开项目的样子。</p>
+<ul>
+<li>注意，点击左上角的<code>登陆</code>按钮后，才可以在手机上调试。需要使用手机<code>百度App</code>扫码登陆。<strong>注意：</strong>在百度小游戏正式对普通用户开放前，需要使用测试版的App才可以打开，请联系百度获取。</li></ul>
+<p><img data-md="/cn/data/upload/egret-docs/Engine2D/minigamebaidu/getStart/p8.png" src="./index_files/p8.png" alt=""></p>
+<p>登陆成功后，会出现<code>预览</code>和<code>发布</code>两个按钮。</p>
+<ul>
+<li>点击<code>预览</code>，可以使用<code>百度App</code>扫码在手机上调试。</li><li>点击<code>发布</code>，可以上传到百度后台，审核后正式发布。</li></ul>
+</div> 
+                <div class="doc-user">
+                    <div class="doc-user-info comment-area" id="comments">
+                        <span>这篇文档对您有帮助吗？</span> 
+
+                        <button class="btn btn-doc-user btn-doc-blue" data="sendThumb">有</button>
+                        
+                        <button class="btn btn-doc-user" data="sendfeedback">没有</button>
+                        
+                        <div class="clearfix"></div>
+                        <form class="form-horizontal comment-form" action="http://developer.egret.com/cn/comment/comment/docfeedback" method="post" style="display:none;">
+                            <div class="control-group">
+                                <div class="comment-postbox-wraper">
+                                    <textarea class="form-control comment-postbox" style="min-height:90px;" name="content"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="control-group">
+                                <button type="submit" class="btn btn-doc-blue  J_ajax_submit_btn" data="mdDocComment">提交</button>
+                                <button class="btn btn-doc-blue btn-doc-cancle">取消</button>
+                            </div>
+                            
+                            <input type="hidden" name="post_title" id="commentType" value="1">
+                            <input type="hidden" name="post_id" value="">
+                        </form>
+                    </div>
+                    <div class="doc-user-edit">
+                        <a href="https://github.com/egret-labs/egret-docs/tree/master//Engine2D/minigamebaidu/getStart/" target="_blank" id="doc-user-edit"><button class="btn btn-doc-user btn-doc-user-larger">到 GitHub 编辑</button></a>
+                    </div>	
+                    <div class="clearfix"></div>							
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="backtotop" style="display: none;"><i class="fa fa-arrow-circle-up"></i></div>
+<script type="text/javascript">
+//全局变量
+    var GV = {
+        DIMAUB: "/cn/",
+        JS_ROOT: "statics/js/",
+        TOKEN: ""
+    };
+</script>
+<!-- Le javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- change to bootstrap3 -->
+<script src="./index_files/jquery.min.js.下载"></script>
+<script src="./index_files/jquery-migrate.min.js.下载"></script>
+<script src="./index_files/wind.min.js.下载"></script>
+<!-- change to  bootstrap3 -->
+<script src="./index_files/bootstrap.min.js.下载"></script>
+<script src="./index_files/frontend.min.js.下载"></script>
+<script>
+    (function(){
+        $("#menu-item-5").removeClass("productBox");
+        $("#menu-item-5").removeClass("dropdown");
+        $("#menu-item-5").addClass("expBox");  
+        $("#menu-item-5").addClass("dropdown");
+    })();
+</script>
+<script src="./index_files/nav.min.js.下载"></script>
+<div style="position: absolute;top:80px;right:20px;width: 220px;line-height: 30px;">
+    <a style="color:#ffffff;" href="https://egret.com/products" target="_blank"><span style="font-size:16px;font-weight:500;">官方教程文档位置调整通知</span><br>官方软件产品的使用手册、API文档、视频教程等资料已调整至对应的产品页面，开发者朋友可点击登陆所需的产品页面查找，给您带来的不便非常抱歉，谢谢！</a>
+</div>
+
+
+
+
+<script>
+    $(function () {
+        $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) {
+            e.stopPropagation();
+        });
+        
+        (function ($) {
+            $.fn.totop = function (opt) {
+                var scrolling = false;
+                return this.each(function () {
+                    var $this = $(this);
+                    $(window).scroll(function () {
+                        if (!scrolling) {
+                            var sd = $(window).scrollTop();
+                            if (sd > 100) {
+                                $this.fadeIn();
+                            } else {
+                                $this.fadeOut();
+                            }
+                        }
+                    });
+
+                    $this.click(function () {
+                        scrolling = true;
+                        $('html, body').animate({
+                            scrollTop: 0
+                        }, 500, function () {
+                            scrolling = false;
+                            $this.fadeOut();
+                        });
+                    });
+                });
+            };
+        })(jQuery);
+
+        $("#backtotop").totop();
+    });
+    
+function setNavLogo(){
+    if(document.body.clientWidth>1270)
+    {
+        $("#navlogo").attr("src", "/cn/tpl/simplebootx/Public/images/logo.png");
+    }else{
+        $("#navlogo").attr("src", "/cn/tpl/simplebootx/Public/images/logo.png");
+    }
+}
+
+function getLoginInfo(){
+    $.post("/cn/user/index/is_login", {}, function (data) {
+        if (data.status == 1)
+        {
+            
+            $("#edn_user_synlogin").attr("src","/cn/user/login/edn_user_synlogin");
+            $("#main-menu-user-headicon").attr("src", "http://bbs.egret.com/uc_server/avatar.php?uid=" + data.user.avatar + "&size=middle");
+            $("#main-menu-user-nicename").text(data.user.user_nicename != "" ? data.user.user_nicename : data.user.user_login);
+            if(data.user.user_type==1)
+                $("#menu-user-info .subnav-login-out").prepend("<li class='logintOutBox'><a href=\"/cn/admin/index\"><i class='fa fa-user'></i> &nbsp;后台管理</a></li>");
+            $("#menu-user-login").hide();
+            $("#menu-user-info").show();
+
+        }
+        if (data.status == 0) {
+            $("#menu-user-info").hide();
+            $("#menu-user-login").show();
+        }
+
+    });
+}
+
+function checkLogin(){
+    if($("#main-menu-user-nicename").text()!="")
+    {
+        return true;
+    }
+    return false;
+}
+
+$(window).resize(function(){         
+    setNavLogo()
+});
+
+$(window).ready(function(){         
+    getLoginInfo();
+});
+
+;(function() {
+    "use strict";
+    //var index=window.location.href.indexOf("/cn/");
+    //var mode=window.location.href.substr(index);
+    //$("#main-menu").find("[href='"+mode+"']").attr("style","color:#FFFFFF");
+    if(window.location.href.indexOf("/cn/page/index/id/8")>0)
+    {
+        $("#menu-item-2 a").attr("style","color:#1dafec");
+    }
+    else if(window.location.href.indexOf("book")>0)
+    {
+        $("#menu-item-19 a").attr("style","color:#1dafec");
+    }
+    else if(window.location.href.indexOf("docs")>0)
+    {
+        $("#menu-item-3 a").attr("style","color:#1dafec");
+    }
+    else if(window.location.href.indexOf("apidoc")>0)
+    {
+        $("#menu-item-4 a").attr("style","color:#1dafec");
+    }
+    else if(window.location.href.indexOf("video")>0)
+    {
+        $("#menu-item-6 a").attr("style","color:#1dafec");
+    }
+    else if(window.location.href.indexOf("/cn/page/index/id/54")>0)
+    {
+        $("#menu-item-8 a").attr("style","color:#1dafec");
+    }
+    else if(window.location.href.indexOf("example")>0)
+    {
+        $("#menu-item-5>a").attr("style","color:#1dafec");
+    }
+    else if(window.location.href.indexOf("activity")>0 || window.location.href.indexOf("Activity")>0)
+    {
+        $("#menu-item-8 a").attr("style","color:#1dafec");
+    }
+    if(window.location.href.indexOf("github")>0)
+    {   
+        $("#menu-item-22 a").attr("style","color:#1dafec");
+    }
+ 
+})();
+
+setNavLogo();
+
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e37d06fa1de56304c9d645100ad450ac";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<script type="text/javascript">
+    //$("#g-css-theme").remove();
+    // var tid = "";
+    var staticRulePath = "github/egret-docs/config/Engine2D_mapping_url.json";
+    var path = "github/egret-docs/Engine2D/README.md";
+    var root = "http://developer.egret.com/cn/github/egret-docs";
+    var init_is_md = "";
+    var category_c = $("#categroy-content").text();
+    var cdn_path = "/cn/data/upload/";
+    var mptime = "1553484888";
+    // console.log(root);
+    ///绑定按钮事件,显示隐藏列表
+    (function () {
+        $(".media-terms-show-list button").on("click",function(e) {
+            var target = $(e.currentTarget).attr("data-target");
+            $("." + target).toggle();
+            console.log($("." + target).is(":visible"));
+            $("." + target).is(":visible") ? $(this).css("left" , $("." + target).width()) : $(this).css("left",0);
+        });
+    })();
+</script>
+<script src="./index_files/jquery-md.easytree.min.js.下载"></script><!-- 菜单 -->
+<script src="./index_files/marked.min.js.下载"></script> <!-- md文件处理 -->
+<script src="./index_files/prettify.min.js.下载"></script> <!-- 语法高亮 -->
+<script src="./index_files/raphael.min.js.下载"></script> <!-- 网页中绘制矢量图形 -->
+<script src="./index_files/underscore.min.js.下载"></script> <!-- 一整套函数式编程 -->
+<script src="./index_files/sequence-diagram.min.js.下载"></script>
+<script src="./index_files/flowchart.min.js.下载"></script>
+<script src="./index_files/jquery.flowchart.min.js.下载"></script>
+<script src="./index_files/editormd.min.js.下载"></script>
+<script src="./index_files/doc_md.min.js.下载"></script><div id="easytree-reject" class="easytree-drag-helper easytree-drop-reject" style="top: 18px; left: 700px;"><span class="easytree-drag-helper-img"></span></div><div id="easytree-accept" class="easytree-drag-helper easytree-drop-accept" style="top: 18px; left: 700px;"><span class="easytree-drag-helper-img"></span></div><div id="easytree-reject" class="easytree-drag-helper easytree-drop-reject" style="top: 332px; left: 721px;"><span class="easytree-drag-helper-img"></span></div><div id="easytree-accept" class="easytree-drag-helper easytree-drop-accept" style="top: 332px; left: 721px;"><span class="easytree-drag-helper-img"></span></div>
+
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;" src="./index_files/saved_resource.html"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div></body></html>
